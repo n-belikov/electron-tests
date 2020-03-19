@@ -4,3 +4,8 @@
 // `nodeIntegration` is turned off. Use `preload.js` to
 // selectively enable features needed in the rendering
 // process.
+const electron = require('electron');
+
+document.getElementById("youtube").addEventListener("click", () => {
+  electron.remote.getCurrentWindow().loadURL("https://youtube.com/");
+});
